@@ -1,0 +1,88 @@
+body {
+  background-image: url(hatterek/hatter1.jpg);
+  font-family: Arial;
+  text-align: justify;
+}
+main {
+  max-width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-areas:
+    "h h h"
+    "n n n"
+    "a a as"
+    "f f f";
+    background-color: white;
+}
+header {
+  grid-area: h;
+  letter-spacing: 5px;
+  font-size: 4vw;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+nav {
+  grid-area: n;
+  background-color: rgb(115, 126, 96);
+}
+nav ul {
+  list-style-type: none;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+nav ul li {
+  padding: 5px;
+  text-align: center;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+}
+nav a:hover {
+  background-color: rgb(72, 97, 29);
+}
+
+article {
+  grid-area: a;
+  margin: 15px;
+}
+article img {
+  float: right;
+  max-width: 200px;
+  border: 1px solid #b8fcbe;
+  padding: 5px;
+  margin-left: 12px;
+  border-radius: 10px;
+}
+article ul {
+  list-style-type: decimal;
+}
+article h2{
+    border-bottom: 2px solid black;
+}
+
+aside {
+  grid-area: as;
+}
+aside img{
+    width: 100%;
+}
+
+footer {
+  grid-area: f;
+  background-color: rgb(115, 126, 96);
+  text-align: center;
+  padding: 10px;
+}
+@media screen and (max-width: 600px) {
+  main {
+    grid-template-areas:
+      "h"
+      "n"
+      "a"
+      "as"
+      "f";
+  }
+}
